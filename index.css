@@ -4,6 +4,7 @@ body {
     background-color: #F2F1EF; /* Цвет фона */
     background-size: cover; /* Заполнение фона по размеру */
     background-repeat: no-repeat; /* Предотвращение повторения фона */
+    overflow-x: hidden;
 }
 
 header {
@@ -13,21 +14,25 @@ header {
 .menu {
     display: flex ;
     align-items: center;
+    justify-content: space-between;
     list-style-type: none;
-    padding: 20px 100px 20px;
+    padding: 15px 6% 10px;
     height: 100%;
 }
 
-.menu li {
-    margin-right: 20px;
+.icons {
+    display: flex ;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
 }
 
-.menu li.logo {
-    margin-right: auto;
+.icons li {
+    margin-right: 0;
 }
 
 .menu li a img {
-    size: 20px;
+    max-width: 50%;
 }
 
 /* Стили для выпадающего меню */
@@ -72,51 +77,70 @@ header {
 }
 
 .image-slider-container {
-    margin-left: 50px;
+    margin-left: 6%;
     width: 100%;
     overflow: hidden;
+    box-shadow: -12px 12px 10px rgba(34, 34, 34, 0.5);
 }
 
 .image-slider {
     display: flex;
     animation: scroll 10s linear infinite;
+
+    
 }
 
 .image-slider img {
+    max-width: 17%; /* Максимальная ширина изображения будет равна ширине родительского контейнера */
+    height: auto;
 }
 
 .tagline-block {
     text-align: center;
-    margin-top: 30px; /* Пример отступа сверху */
-    margin-bottom: 40px;
+    margin-top: 30px; 
+    margin-bottom: 20px;
 }
 
 .tagline-block h2 {
-    font-size: 34px; /* Пример размера шрифта */
-    color: #F56647; /* Пример цвета текста */
-    /* Другие стили заголовка */
+    font-size: 38px; 
+    color: #F56647; 
+
+}
+
+.new-items {
+    margin-left: 6%;
+    margin-right: 6%;
+    max-width: 100%;
 }
 
 .top-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px; /* Пример отступа сверху */
+    margin-top: 20px; 
 }
 
 .left-element {
-    /* Стили для элемента слева */
+    font-size: 30px; 
 }
 
 .right-element {
-    /* Стили для элемента справа */
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    font-size: 30px; 
+    gap: 6px;
+}
+
+.right-element img {
+    max-width: 14%;
+    height: 14%;
+    margin-bottom: 2%;
 }
 
 #sort-options {
     display: none; /* Скрываем список сразу */
     position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
     padding: 5px 0;
     margin-top: 5px;
     list-style: none;
@@ -133,24 +157,28 @@ header {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивные колонки */
-    gap: 20px; /* Пример промежутка между товарами */
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 65px; 
 }
 
 .product {
-    border: 1px solid #ccc;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: center;
 }
 
 .product img {
     max-width: 100%;
     height: auto;
+    box-shadow: -4px 4px 10px rgba(34, 34, 34, 0.5);
 }
 
 .product h3 {
     font-size: 18px;
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .product p {
