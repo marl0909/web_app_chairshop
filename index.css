@@ -1,0 +1,162 @@
+/* Стили для навигационного меню */
+
+body {
+    background-color: #F2F1EF; /* Цвет фона */
+    background-size: cover; /* Заполнение фона по размеру */
+    background-repeat: no-repeat; /* Предотвращение повторения фона */
+}
+
+header {
+    height: 15%; /* Хедбар занимает 15% высоты окна браузера */
+}
+
+.menu {
+    display: flex ;
+    align-items: center;
+    list-style-type: none;
+    padding: 20px 100px 20px;
+    height: 100%;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li.logo {
+    margin-right: auto;
+}
+
+.menu li a img {
+    size: 20px;
+}
+
+/* Стили для выпадающего меню */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -20%; /* Меню изначально сдвинуто за пределы экрана */
+    width: 20%; /* Ширина меню */
+    height: 100%;
+    background-color: #C4C0B3; /* Цвет фона меню */
+    transition: right 0.3s ease; /* Анимация открытия/закрытия меню */
+    z-index: 1001; /* Заставляем меню отображаться поверх остального контента */
+}
+
+.sidebar.active {
+    right: 0; /* Отображаем меню на экране */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Растягиваем затемнение на всю ширину экрана */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный цвет для затемнения */
+    display: none; /* Изначально скрываем затемнение */
+    z-index: 1000; /* Помещаем затемнение под меню */
+}
+
+.overlay.active {
+    display: block; /* Показываем затемнение при открытом меню */
+}
+
+.image-slider-container {
+    margin-left: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-slider {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.image-slider img {
+}
+
+.tagline-block {
+    text-align: center;
+    margin-top: 30px; /* Пример отступа сверху */
+    margin-bottom: 40px;
+}
+
+.tagline-block h2 {
+    font-size: 34px; /* Пример размера шрифта */
+    color: #F56647; /* Пример цвета текста */
+    /* Другие стили заголовка */
+}
+
+.top-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Пример отступа сверху */
+}
+
+.left-element {
+    /* Стили для элемента слева */
+}
+
+.right-element {
+    /* Стили для элемента справа */
+}
+
+#sort-options {
+    display: none; /* Скрываем список сразу */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    margin-top: 5px;
+    list-style: none;
+}
+
+#sort-options li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#sort-options li:hover {
+    background-color: #f0f0f0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивные колонки */
+    gap: 20px; /* Пример промежутка между товарами */
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 14px;
+}
+
+.product button {
+    margin-top: 10px;
+}

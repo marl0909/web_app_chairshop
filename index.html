@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.menu a[href="#"]').addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.toggle('active'); // Переключаем класс active у меню
+                document.querySelector('.overlay').classList.toggle('active'); // Переключаем класс active у затемнения
+            });
+            document.querySelector('.overlay').addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.remove('active'); // Закрываем меню
+                this.classList.remove('active'); // Скрываем затемнение
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="logo">
+                    <a href="index.html">
+                        <img src="image/icons/logo.png">
+                    </a>
+                </li>
+                <li><a href="html/favorites.html">
+                    <img src="image/icons/favorites.png">
+                </a></li>
+                <li><a href="html/cart.html">
+                    <img src="image/icons/cart.png">
+                </a></li>
+                <li><a href="#">
+                    <img src="image/icons/menu.png">
+                </a></li>
+            </ul>
+            <div class="overlay"></div>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Каталоги</a>
+                        <ul>
+                            <li><a href="category1.html">Каталог 1</a></li>
+                            <li><a href="category2.html">Каталог 2</a></li>
+                            <li><a href="category3.html">Каталог 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <div class="image-slider-container">
+        <div class="image-slider">
+            <img src="image/photos/chair1.png" alt="Image 1">
+            <img src="image/photos/chair2.png" alt="Image 2">
+            <img src="image/photos/chair3.png" alt="Image 3">
+            <img src="image/photos/chair4.png" alt="Image 4">
+            <img src="image/photos/chair5.png" alt="Image 5">
+            <!-- Добавьте сколько угодно изображений -->
+        </div>
+    </div>
+
+    <div class="tagline-block">
+        <h2>Discover the Art of Chair!</h2>
+    </div>
+
+    <div class="new-items">
+        <div class="top-block">
+            <div class="left-element">New items</div>
+            <div class="right-element">
+                <button id="sort-btn">Sort by</button>
+                <ul id="sort-options">
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <!-- Добавьте сколько угодно вариантов сортировки -->
+                </ul>
+            </div>
+        </div>
+        <div class="product-grid">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more product elements as needed -->
+        </div>
+    </div>
+</body>
+</html>
