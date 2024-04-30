@@ -1,0 +1,60 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+}
+
+header {
+    padding: 20px 50px;
+    background-color: #f8f8f8;
+}
+
+main {
+    padding: 20px 50px;
+}
+
+#contacts h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #302C22;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #302C22;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.contact-item span, .contact-item p {
+    display: inline; /* делает заголовок и параграф строчными элементами */
+    vertical-align: top; /* выравнивание по верхней границе, если элементы разной высоты */
+}
+
+#contacts > div {
+    margin-bottom: 1%;
+}
+
+.contactUs {
+    margin-right: 27%;
+}
+
+@media (max-width: 768px) {
+    header, main {
+        padding: 20px;
+    }
+}

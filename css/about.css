@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: #FFFFFF; /* белый фон */
@@ -23,13 +23,13 @@ section {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #302C22; /* чуть темнее серого для заголовков */
 }
 
-h2 {
-    font-size: 20px;
+span {
+    font-size: 24px;
     margin-bottom: 15px;
     color: #F56647; /* тот же цвет для подзаголовков */
 }
