@@ -15,8 +15,8 @@ header {
 }
 
 header img {
-    max-width: 50%; /* Фотография подстраивается под ширину контейнера */
-    height: auto; /* Автоматический подбор высоты */
+    max-width: 50%;
+    height: auto;
 }
 
 main {

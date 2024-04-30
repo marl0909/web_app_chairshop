@@ -2,8 +2,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #F2F1EF; /* белый фон */
-    color: #333333; /* темно-серый текст */
+    background: #F2F1EF;
+    color: #333333;
 }
 
 header {
@@ -11,12 +11,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #F2F1EF; /* светло-серый фон для шапки */
+    background-color: #F2F1EF;
 }
 
 header img {
-    max-width: 50%; /* Фотография подстраивается под ширину контейнера */
-    height: auto; /* Автоматический подбор высоты */
+    max-width: 50%;
+    height: auto;
 }
 
 main {
@@ -30,31 +30,25 @@ section {
 h1 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #302C22; /* чуть темнее серого для заголовков */
+    color: #302C22;
 }
 
 span {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #F56647; /* тот же цвет для подзаголовков */
+    color: #F56647;
 }
 
 p {
     font-size: 16px;
-    color: #302C22; /* светло-серый текст */
+    color: #302C22;
     line-height: 1.6;
 }
 
 .aboutUs {
     margin-right: 27%;
 }
-/*
-#about {
-    background-color: #FAFAFA; /* еще более светлый серый фон для первой секции 
-    padding: 30px;
-}
 
-/* Адаптивные стили для устройств с меньшим разрешением */
 @media (max-width: 768px) {
     header, main {
         padding: 20px;

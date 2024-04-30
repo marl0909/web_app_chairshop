@@ -10,12 +10,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.btn-menu').addEventListener('click', function() {
-                document.querySelector('.sidebar').classList.toggle('active'); // Переключаем класс active у меню
-                document.querySelector('.overlay').classList.toggle('active'); // Переключаем класс active у затемнения
+                document.querySelector('.sidebar').classList.toggle('active');
+                document.querySelector('.overlay').classList.toggle('active');
             });
             document.querySelector('.overlay').addEventListener('click', function() {
-                document.querySelector('.sidebar').classList.remove('active'); // Закрываем меню
-                this.classList.remove('active'); // Скрываем затемнение
+                document.querySelector('.sidebar').classList.remove('active');
+                this.classList.remove('active');
             });
             let toggleList = document.querySelectorAll('.toggle-sublist');
             toggleList.forEach(function(item) {
@@ -76,7 +76,6 @@
             <img src="image/photos/chair4.png" alt="Image 4">
             <img src="image/photos/chair5.png" alt="Image 5">
             <img src="image/photos/chair9.png" alt="Image 6">
-            <!-- Добавьте сколько угодно изображений -->
         </div>
     </div>
 
@@ -134,7 +133,6 @@
                 <span>Product 1</span>
                 <span>Description of Product 1</span>
             </div>
-            <!-- Add more product elements as needed -->
         </div>
     </div>
 

@@ -15,8 +15,8 @@ header {
 }
 
 header img {
-    max-width: 50%; /* Фотография подстраивается под ширину контейнера */
-    height: auto; /* Автоматический подбор высоты */
+    max-width: 50%;
+    height: auto;
 }
 
 main {
@@ -49,8 +49,8 @@ a:hover {
 }
 
 .contact-item span, .contact-item p {
-    display: inline; /* делает заголовок и параграф строчными элементами */
-    vertical-align: top; /* выравнивание по верхней границе, если элементы разной высоты */
+    display: inline;
+    vertical-align: top;
 }
 
 #contacts > div {
