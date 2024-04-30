@@ -7,8 +7,16 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 50px;
-    background-color: #f8f8f8;
+    background-color: #F2F1EF;
+}
+
+header img {
+    max-width: 50%; /* Фотография подстраивается под ширину контейнера */
+    height: auto; /* Автоматический подбор высоты */
 }
 
 main {
