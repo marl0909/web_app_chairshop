@@ -32,7 +32,7 @@ header {
 }
 
 .menu li a img {
-    max-width: 50%;
+    max-width: 40%;
 }
 
 /* Стили для выпадающего меню */
@@ -74,6 +74,37 @@ header {
 
 .overlay.active {
     display: block; /* Показываем затемнение при открытом меню */
+}
+
+.main-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-list > li {
+    margin-bottom: 5vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #302C22;
+    position: relative;
+}
+
+.sub-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2vh;
+    display: none;
+    color: #474231;
+}
+
+.sub-list li {
+    margin-bottom: 2vh;
+}
+
+.sub-list.opened {
+    display: block;
 }
 
 .image-slider-container {
@@ -175,14 +206,12 @@ header {
     box-shadow: -4px 4px 10px rgba(34, 34, 34, 0.5);
 }
 
-.product h3 {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
 
-.product p {
-    font-size: 14px;
+
+.product span {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 7px;
 }
 
 .product button {

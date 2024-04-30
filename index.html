@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.menu a[href="#"]').addEventListener('click', function() {
@@ -15,6 +17,13 @@
                 document.querySelector('.sidebar').classList.remove('active'); // Закрываем меню
                 this.classList.remove('active'); // Скрываем затемнение
             });
+            let toggleList = document.querySelectorAll('.toggle-sublist');
+            toggleList.forEach(function(item) {
+                item.addEventListener('click', function() {
+                let sublist = this.querySelector('.sub-list');
+                sublist.classList.toggle('opened');
+            });
+        });
         });
     </script>
 </head>
@@ -41,17 +50,17 @@
             </ul>
             <div class="overlay"></div>
             <div class="sidebar">
-                <ul>
-                    <li><a href="#">Каталоги</a>
-                        <ul>
-                            <li><a href="category1.html">Каталог 1</a></li>
-                            <li><a href="category2.html">Каталог 2</a></li>
-                            <li><a href="category3.html">Каталог 3</a></li>
+                <ul class="main-list">
+                    <li class="toggle-sublist">Элемент 1
+                        <ul class="sub-list">
+                            <li>Подэлемент 1</li>
+                            <li>Подэлемент 2</li>
+                            <li>Подэлемент 3</li>
                         </ul>
                     </li>
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="about.html">Про нас</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
+                    <li>Элемент 2</li>
+                    <li>Элемент 3</li>
+                    <li>Элемент 4</li>
                 </ul>
             </div>
         </nav>
@@ -77,21 +86,11 @@
     <div class="new-items">
         <div class="top-block">
             <div class="left-element">New items</div>
-            <div class="right-element">
-                <span>Sort by</span>
-                <img src="image/icons/sort.png">
-                <ul id="sort-options">
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <!-- Добавьте сколько угодно вариантов сортировки -->
-                </ul>
-            </div>
         </div>
         <div class="product-grid">
             <div class="product">
                 <img src="image/photos/chair6.png" alt="Product 1">
-                <span>Product 1</span>
+                <span>Cozy Haven</span>
                 <span>Description of Product 1</span>
             </div>
             <div class="product">

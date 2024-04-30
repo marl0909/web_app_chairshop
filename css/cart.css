@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.main-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-list li {
+    margin-bottom: 5vh;
+    position: relative;
+}
+
+.sub-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2vh;
+    display: none;
+}
+
+.sub-list li {
+    margin-bottom: 2vh;
+}
+
+.sub-list.opened {
+    display: block;
+}

@@ -1,0 +1,35 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список с подсписком</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    let toggleList = document.querySelectorAll('.toggle-sublist');
+    toggleList.forEach(function(item) {
+        item.addEventListener('click', function() {
+            var sublist = this.querySelector('.sub-list');
+            sublist.classList.toggle('opened');
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <ul class="main-list">
+        <li class="toggle-sublist">Элемент 1
+            <ul class="sub-list">
+                <li>Подэлемент 1</li>
+                <li>Подэлемент 2</li>
+                <li>Подэлемент 3</li>
+            </ul>
+        </li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+        <li>Элемент 4</li>
+    </ul>
+</body>
+</html>
