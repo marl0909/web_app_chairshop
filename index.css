@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    height: 15%; /* Хедбар занимает 15% высоты окна браузера */
+    height: 100px; /* Хедбар занимает 15% высоты окна браузера */
 }
 
 .menu {
@@ -33,6 +33,7 @@ header {
 
 .menu li a img {
     max-width: 40%;
+    cursor: pointer;
 }
 
 /* Стили для выпадающего меню */
@@ -40,8 +41,8 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
-    right: -20%; /* Меню изначально сдвинуто за пределы экрана */
-    width: 20%; /* Ширина меню */
+    right: -350px; /* Меню изначально сдвинуто за пределы экрана */
+    width: 350px; /* Ширина меню */
     height: 100%;
     background-color: #C4C0B3; /* Цвет фона меню */
     transition: right 0.3s ease; /* Анимация открытия/закрытия меню */
@@ -78,15 +79,18 @@ header {
 
 .main-list {
     list-style-type: none;
+    margin-left: 10%;
     padding: 0;
 }
 
 .main-list > li {
     margin-bottom: 5vh;
     font-family: 'Playfair Display', serif;
+    font-weight: 800;
     font-size: 40px;
     color: #302C22;
     position: relative;
+    cursor: pointer;
 }
 
 .sub-list {
@@ -94,13 +98,17 @@ header {
     padding: 0;
     font-size: 32px;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     margin-top: 2vh;
+    margin-left: 1vh;
     display: none;
     color: #474231;
 }
 
 .sub-list li {
     margin-bottom: 2vh;
+    cursor: pointer;
+    
 }
 
 .sub-list.opened {
@@ -111,6 +119,7 @@ header {
     margin-left: 6%;
     width: 100%;
     overflow: hidden;
+    right: -200px;
     box-shadow: -12px 12px 10px rgba(34, 34, 34, 0.5);
 }
 
@@ -124,6 +133,7 @@ header {
 .image-slider img {
     max-width: 17%; /* Максимальная ширина изображения будет равна ширине родительского контейнера */
     height: auto;
+    
 }
 
 .tagline-block {
@@ -198,12 +208,14 @@ header {
     flex-direction: column;
     align-items: flex-start;
     text-align: center;
+    cursor: pointer;
 }
 
 .product img {
     max-width: 100%;
     height: auto;
     box-shadow: -4px 4px 10px rgba(34, 34, 34, 0.5);
+    
 }
 
 
@@ -216,4 +228,16 @@ header {
 
 .product button {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .image-slider-container {
+        display: none;
+    }
+
+    .menu li a img {
+        max-width: 85%;
+    }
 }

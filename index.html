@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('.menu a[href="#"]').addEventListener('click', function() {
+            document.querySelector('.btn-menu').addEventListener('click', function() {
                 document.querySelector('.sidebar').classList.toggle('active'); // Переключаем класс active у меню
                 document.querySelector('.overlay').classList.toggle('active'); // Переключаем класс active у затемнения
             });
@@ -43,7 +43,7 @@
                     <li><a href="html/cart.html">
                         <img src="image/icons/cart.png">
                     </a></li>
-                    <li><a href="#">
+                    <li><a class = 'btn-menu'>
                         <img src="image/icons/menu.png">
                     </a></li>
                 </ul> 
@@ -51,16 +51,17 @@
             <div class="overlay"></div>
             <div class="sidebar">
                 <ul class="main-list">
-                    <li class="toggle-sublist">Элемент 1
+                    <li class="toggle-sublist">Kategories
                         <ul class="sub-list">
-                            <li>Подэлемент 1</li>
-                            <li>Подэлемент 2</li>
-                            <li>Подэлемент 3</li>
+                            <li>Armchairs</li>
+                            <li>Dining chairs</li>
+                            <li>Office chairs</li>
+                            <li>Accent chairs</li>
                         </ul>
                     </li>
-                    <li>Элемент 2</li>
-                    <li>Элемент 3</li>
-                    <li>Элемент 4</li>
+                    <li>Delivery</li>
+                    <li>About us</li>
+                    <li>Contacts</li>
                 </ul>
             </div>
         </nav>
@@ -114,7 +115,22 @@
                 <span>Description of Product 1</span>
             </div>
             <div class="product">
-                <img src="image/photos/chair2.png" alt="Product 6">
+                <img src="image/photos/chair8.png" alt="Product 6">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="image/photos/chair1.png" alt="Product 6">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="image/photos/chair3.png" alt="Product 6">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="image/photos/chair6.png" alt="Product 6">
                 <span>Product 1</span>
                 <span>Description of Product 1</span>
             </div>
