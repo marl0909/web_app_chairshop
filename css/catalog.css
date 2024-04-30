@@ -1,41 +1,39 @@
-body {
+.sort-area {
+    margin-left: 6%;
     font-family: 'Poppins', sans-serif;
-    margin: 0; /* Убираем отступы */
-    padding: 0; /* Убираем отступы */
+    padding: 0;
     display: flex;
-    justify-content: flex-start; /* Выравнивание содержимого слева */
+    justify-content: flex-start;
 }
 
 .filter-container {
     display: flex;
-    justify-content: flex-start; /* Элементы внутри контейнера выравниваются слева */
-    align-items: stretch; /* Растягиваем элементы по вертикали для заполнения контейнера */
+    justify-content: flex-start;
+    align-items: stretch;
     padding: 20px;
-    width: 50%; /* Занимает половину ширины родителя, адаптируйте по вашему желанию */
-    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+    width: 50%;
+    box-sizing: border-box;
 }
 
 .filter {
-    flex: 1; /* Каждый фильтр занимает равное пространство */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 10px; /* Отступ между элементами */
+    margin-right: 10px;
 }
 
 .filter:last-child {
-    margin-right: 0; /* Убираем отступ у последнего элемента */
+    margin-right: 0; 
 }
 
 .filter select {
-    flex: 1; /* Растягиваем select на всю доступную высоту */
-    padding: 10px 30px 10px 10px; /* Правый padding больше, чтобы компенсировать иконку стрелки */
+    flex: 1; 
+    padding: 10px 30px 10px 10px; 
     border: 1px solid #ccc;
     border-radius: 5px;
-    /*appearance: none; /* Убираем стандартное оформление */
-    /*background: url('../image/icons/sort.png') no-repeat right center; /* Иконка стрелки справа от текста */
     font-size: 16px;
     font-family: 'Poppins';
-    background-size: 20px; /* Размер иконки */
+    background-size: 20px; 
     cursor: pointer;
 }
 
@@ -48,16 +46,16 @@ body {
 @media (max-width: 600px) {
     .filter-container {
         flex-direction: column;
-        align-items: stretch; /* Выравнивание элементов на всю ширину в мобильной версии */
-        width: 100%; /* Контейнер теперь на всю ширину экрана */
+        align-items: stretch; 
+        width: 100%; 
     }
 
     .filter {
-        margin-right: 0; /* Убираем правый отступ в мобильной версии */
-        margin-bottom: 10px; /* Добавляем нижний отступ между селектами */
+        margin-right: 0; 
+        margin-bottom: 10px; 
     }
 
     .filter:last-child {
-        margin-bottom: 0; /* Убираем нижний отступ у последнего элемента */
+        margin-bottom: 0;
     }
 }

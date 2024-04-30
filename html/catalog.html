@@ -5,43 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog</title>
     <link rel="stylesheet" type="text/css" href="../css/catalog.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.btn-menu').addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.toggle('active');
+                document.querySelector('.overlay').classList.toggle('active');
+            });
+            document.querySelector('.overlay').addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.remove('active');
+                this.classList.remove('active');
+            });
+            let toggleList = document.querySelectorAll('.toggle-sublist');
+            toggleList.forEach(function(item) {
+                item.addEventListener('click', function() {
+                let sublist = this.querySelector('.sub-list');
+                sublist.classList.toggle('opened');
+            });
+        });
+        });
+    </script>
 </head>
 <body>
-    <div class="filter-container">
-        <div class="filter">
-            <label for="sortby", style="padding-bottom: 10px;">Sort by</label>
-            <select name="sortby" id="sortby">
-                <option value="price_low_high">Price Low to High</option>
-                <option value="price_high_low">Price High to Low</option>
-                <option value="newest">Newest</option>
-                <option value="oldest">Oldest</option>
-            </select>
-        </div>
-        <div class="filter">
-            <label for="material", style="padding-bottom: 10px;">Material</label>
-            <select name="material" id="material">
-                <option value="leather">Leather</option>
-                <option value="fabric">Fabric</option>
-                <option value="wood">Wood</option>
-            </select>
-        </div>
-        <div class="filter">
-            <label for="color", style="padding-bottom: 10px;">Color</label>
-            <select name="color" id="color">
-                <option value="black">Black</option>
-                <option value="white">White</option>
-                <option value="gray">Gray</option>
-            </select>
-        </div>
-        <div class="filter">
-            <label for="price", style="padding-bottom: 10px;">Price</label>
-            <select name="price" id="price">
-                <option value="0_100">$0 - $100</option>
-                <option value="100_500">$100 - $500</option>
-                <option value="500_1000">$500 - $1000</option>
-            </select>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="logo">
+                    <a href="../index.html">
+                        <img src="../image/icons/logo.png">
+                    </a>
+                </li>
+                <ul class="icons">
+                    <li><a href="html/favorites.html">
+                        <img src="../image/icons/favorites.png">
+                    </a></li>
+                    <li><a href="html/cart.html">
+                        <img src="../image/icons/cart.png">
+                    </a></li>
+                    <li><a class = 'btn-menu'>
+                        <img src="../image/icons/menu.png">
+                    </a></li>
+                </ul> 
+            </ul>
+            <div class="overlay"></div>
+            <div class="sidebar">
+                <ul class="main-list">
+                    <li class="toggle-sublist">Kategories
+                        <ul class="sub-list">
+                            <li><a style="text-decoration: none; color: inherit" href="../html/catalog.html">Armchairs</a></li>
+                            <li>Dining chairs</li>
+                            <li>Office chairs</li>
+                            <li>Accent chairs</li>
+                        </ul>
+                    </li>
+                    <li><a style="text-decoration: none; color: inherit" href="../html/delivery.html">Delivery</a></li>
+                    <li><a style="text-decoration: none; color: inherit" href="../html/about.html">About us</a></li>
+                    <li><a style="text-decoration: none; color: inherit" href="../html/contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sort-area">
+        <div class="filter-container">
+            <div class="filter">
+                <label for="sortby", style="padding-bottom: 10px;">Sort by</label>
+                <select name="sortby" id="sortby">
+                    <option value="price_low_high">Price Low to High</option>
+                    <option value="price_high_low">Price High to Low</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="material", style="padding-bottom: 10px;">Material</label>
+                <select name="material" id="material">
+                    <option value="leather">Leather</option>
+                    <option value="fabric">Fabric</option>
+                    <option value="wood">Wood</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="color", style="padding-bottom: 10px;">Color</label>
+                <select name="color" id="color">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="gray">Gray</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="price", style="padding-bottom: 10px;">Price</label>
+                <select name="price" id="price">
+                    <option value="0_100">$0 - $100</option>
+                    <option value="100_500">$100 - $500</option>
+                    <option value="500_1000">$500 - $1000</option>
+                </select>
+            </div>
         </div>
     </div>
+
+    <div class="new-items">
+        <div class="product-grid">
+            <div class="product">
+                <img src="../image/photos/chair6.png" alt="Product 1">
+                <span>Cozy Haven</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair7.png" alt="Product 2">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair8.png" alt="Product 3">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair9.png" alt="Product 4">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair5.png" alt="Product 5">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair8.png" alt="Product 6">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair1.png" alt="Product 6">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair3.png" alt="Product 6">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+            <div class="product">
+                <img src="../image/photos/chair6.png" alt="Product 6">
+                <span>Product 1</span>
+                <span>Description of Product 1</span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
