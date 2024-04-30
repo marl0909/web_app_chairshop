@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catalog</title>
+    <link rel="stylesheet" type="text/css" href="../css/catalog.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
 </head>
 <body>
-    CATALOG
+    <div class="filter-container">
+        <div class="filter">
+            <label for="sortby", style="padding-bottom: 10px;">Sort by</label>
+            <select name="sortby" id="sortby">
+                <option value="price_low_high">Price Low to High</option>
+                <option value="price_high_low">Price High to Low</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="material", style="padding-bottom: 10px;">Material</label>
+            <select name="material" id="material">
+                <option value="leather">Leather</option>
+                <option value="fabric">Fabric</option>
+                <option value="wood">Wood</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="color", style="padding-bottom: 10px;">Color</label>
+            <select name="color" id="color">
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="gray">Gray</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="price", style="padding-bottom: 10px;">Price</label>
+            <select name="price" id="price">
+                <option value="0_100">$0 - $100</option>
+                <option value="100_500">$100 - $500</option>
+                <option value="500_1000">$500 - $1000</option>
+            </select>
+        </div>
+    </div>
 </body>
 </html>
