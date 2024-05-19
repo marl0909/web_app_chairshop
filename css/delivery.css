@@ -38,7 +38,7 @@ main {
     padding: 0 20px;
 }
 
-article span {
+.column div span {
     font-size: 24px;
     color: #43715C;
 }
@@ -50,6 +50,6 @@ p {
     line-height: 1.6;
 }
 
-article {
+.column div {
     margin-bottom: 40px;
 }
